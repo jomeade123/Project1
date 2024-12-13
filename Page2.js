@@ -1,27 +1,24 @@
-// need ID on page 2
-const (finishForms) = document.getElementById('') 
-
-function noForms(){
-    // need ID on page 2
-    const finishForms = document.getElementById('')
-    // need ID on page 2
-    .innerHTML= '<p>No Reccomendations yet...</p>' 
-}
+const vacationContainer = document.querySelector('#vacation-container')
 
 function renderDestinations(){
-    const storedData = JSON.parse(localStorage.getItem('storedData')) || [];
-    article.innerHTML = '';
-    if (storedData.length === 0){
-        noForms();
-    } else {
-        storedData.array.forEach(post => {
+    const storedData = JSON.parse(localStorage.getItem('destForm')) || [];
+    console.log(storedData);
+    if (storedData && storedData.length > 0){
+        storedData.forEach(post => {
             const postForm = document.createElement('div');
-            postForm.classList.add('')
-            postForm.innerHTML = `
-            <h2>${post.location}</h2>
-            <p>${post.date}</p>
-            <p>${post.description}`
-            storedData.appendChild(postForm);
-        });
-    }
+            postForm.classList.add('row')
+            postForm.innerHTML = `    
+            <div class="col-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${post.location} - ${post.date}</h5>
+                        <p class="card-text">${post.description}</p>
+                    </div>
+                </div>
+            </div>
+           `;
+            vacationContainer.appendChild(postForm);
+        });            
+    } 
 }
+renderDestinations();
