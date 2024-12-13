@@ -1,6 +1,5 @@
-document.addEventListener('DOMContentLoaded', function(){
-    const submitButton = document.getElementById('submit');
-const randomButton = document.getElementById('random');
+const submitButton = document.getElementById('submit');
+const randomButton = document.getElementById('randombutton');
 const outputDiv = document.getElementById('output');
 let lastIndex = -1
 
@@ -33,8 +32,6 @@ function saveToLocalStorage(formData){
     localStorage.setItem('destForm', JSON.stringify(destForm));
 }
 
-saveToLocalStorage();
-
 // function to randomly select from the form local storage
 randomButton.addEventListener('click', function(){
     const destForm =JSON.parse(localStorage.getItem('destForm')) || [];
@@ -66,4 +63,3 @@ function getRandomDestination(destForm){
 
     console.log(`Random Destination: ${randomDestination.location} ${randomDestination.date} ${randomDestination.description}`);
 }
-})
