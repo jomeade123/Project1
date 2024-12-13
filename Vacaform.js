@@ -1,11 +1,9 @@
-document.addEventListener('DOMContentLoaded', function(){
-    const submitButton = document.getElementById('submit');
-const randomButton = document.getElementById('random');
+const submitButton = document.getElementById('submit');
+const randomButton = document.getElementById('randombutton');
 const outputDiv = document.getElementById('output');
 let lastIndex = -1
 
 document.getElementById('formdest').addEventListener('submit', formSubmissions);
-
 
 function formSubmissions(event){
     event.preventDefault();
@@ -13,10 +11,10 @@ function formSubmissions(event){
     const location = document.getElementById('travel-location').value;
     const description = document.getElementById('form-description').value;
 
-if (!date || !location || !description){
-    alert("Please fill in all fields.");
-    return;
-} 
+    if (!date || !location || !description){
+        alert("Please fill in all fields.");
+        return;
+    } 
     const formData = {
         date: date,
         location: location,
@@ -33,7 +31,6 @@ function saveToLocalStorage(formData){
     localStorage.setItem('destForm', JSON.stringify(destForm));
 }
 
-saveToLocalStorage();
 
 // function to randomly select from the form local storage
 randomButton.addEventListener('click', function(){
@@ -59,6 +56,10 @@ function getRandomDestination(destForm){
         console.log('No valid destination found.');
         return;
     }
+    document.getElementById('destination-name').innerText = randomDestination.location;
+    document.getElementById('destination-dates').innerText = randomDestination.date;
+    var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+    myModal.show();
 
     outputDiv.innerHTML = `Random Destination: <strong>${randomDestination.location}</strong><br>
     Date: <strong>${randomDestination.date}</strong><br>
@@ -66,4 +67,3 @@ function getRandomDestination(destForm){
 
     console.log(`Random Destination: ${randomDestination.location} ${randomDestination.date} ${randomDestination.description}`);
 }
-})

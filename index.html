@@ -31,61 +31,50 @@
 <body>    
 <header>Suggest or Find the Best Destinations for Your Vacation</header>
 <main>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Random Destination
-  </button>
-  
-  <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Random Destination</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Random Destination</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h2 id="destination-name">Waldorf Astoria Resort (Cancun, Mexico)</h2>
+                <h3 id="destination-dates">March 15, 2025 - March 22, 2025</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
         </div>
-        <div class="modal-body">
-            <h2> Waldorf Astoria Resort (Cancun, Mexico)
-                <h3>March 15, 2025 - March 22, 2025</h3>
-            </h2>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Randomize</button>
-        </div>
-      </div>
     </div>
-  </div>
-        <!-- bootstrap button -->
-        <p id="output"></p>
-    </aside>
-    <form id="formdest">
-        <label for="travel location">Travel Location:</label>
-        <input type="text" id="travel-location" name="travel location" placeholder="City, State" required>
-        <label for="date">Date:</label>
-        <input type="text" id="date" name="date" placeholder="MM/DD/YYYY" required>
-        <label for="form description">Description:</label>
-        <textarea id="form-description" name="form description" placeholder="Describe Travel Location Experience"></textarea>
-        <button id="submit" type="submit">Submit</button>
-    </aside>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div>
+  <aside>
+      <div class="container text-center">
+          <div class="row align-items-start">
+              <div class="col-md-4 text-bg-secondary p-3">
+                  <h2>Having Trouble Finding a Location?</h2>
+                  <p>Try this random location recommendation.</p>
+                  <button id="randombutton" type="button" class="btn btn-primary btn-lg">Get Random Destination</button>
+                  <p id="output"></p>
+              </div>
+              <div class="col-md-4 offset-md-3 text-bg-secondary p-3">
+                  <p>Submit a Review Here</p>
+                  <form id="formdest">
+                      <label for="travel-location">Travel Location:</label>
+                      <input type="text" id="travel-location" name="travel-location" placeholder="City, State" required>
+                      <label for="date">Date:</label>
+                      <input type="text" id="date" name="date" placeholder="MM/DD/YYYY" required>
+                      <label for="form-description">Description:</label>
+                      <textarea id="form-description" name="form-description" placeholder="Describe Travel Location Experience"></textarea>
+                      <button id="submit" type="submit">Submit</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </aside>
+</div>
 
 </div>
 </body>
