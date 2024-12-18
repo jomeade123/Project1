@@ -4,18 +4,11 @@
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-- What was your motivation?
+- Our motivation for creating this project is our interest in traveling and sometimes figuring out where to go and what to do at certain travel locations can be a challenge.
 
-- Everyone enjoys traveling and sometimes figuring out where to go and what to do at certain travel locations can be a challenge.
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-
-- This project was created to help users have an easier time with travel planning.
-
-- What problem does it solve?
+- This project was created to provide a tool to help users have an easier time with travel planning.
 
 - This project helps to improve travel planning and to attract more visitors to potential travel destinations that could be hidden gems.
-
-- What did you learn?
 
 - Through this project we were able to learn more about using GitHub to collaborate on Web Development Projects. We were also able to apply coding skills in the following languages: HTML, Javascript and CSS. Using CSS frameworks was also something new that was learned through this project and modification to a CSS framework to present it to our vision.
 
