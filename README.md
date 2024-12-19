@@ -23,7 +23,7 @@ Provide a short description explaining the what, why, and how of your project. U
 
 ## Usage
 
-    ![](images/Page1.png)
+![](./images/Page1.png)
 
 ## Credits
 
